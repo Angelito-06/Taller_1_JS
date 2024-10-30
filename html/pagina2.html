@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frases Memorables de Deadpool</title>
+    <script src="../js/utilidades.js"></script>
+</head>
+<body>
+
+    <script>
+        h1 = crearNodoTexto("h1", "Frases Meorables de Deadpool")
+        p = crearNodoTexto("p", "Deadpool es conocido por su ingenio rápido y su sentido del humor único. Aquí hay algunas de sus frases más memorables:")
+        h2 = crearNodoTexto("h2", "Citas Famosas")
+        ul = crearNodo("ul")
+        primeraCita = crearNodoTexto("li",'"Maximum effort!"')
+        textoSegundaCita = "I'm about to do you what Limp Bizkit did to music in the late '90s."
+        segundaCita = crearNodoTexto("li",`"${textoSegundaCita}"`)
+        textoTerceraCita = "You're probably thinking, 'This was a superhero movie but that guy in the suit just turned that other guy into a kebab!'"
+        terceraCita = crearNodoTexto("li",`"${textoTerceraCita}"`)
+
+        adicionarContenedor(primeraCita, ul)
+        adicionarContenedor(segundaCita, ul)
+        adicionarContenedor(terceraCita, ul)
+        
+
+        informacion = crearNodo("p")
+        nota = crearNodoTexto("strong", "Nota: ")
+        informacionText = document.createTextNode("Cada una se las fraces captura perfectamente el espiritu sarcastico y subversivo de Deadpool.")
+        adicionarContenedor(nota, informacion)
+        adicionarContenedor(informacionText, informacion)
+        h3 = crearNodoTexto("h3","Video de las Mejores Escenas")
+        video = crearVideo("../recursos/videos/videoplayback.mp4")
+
+
+        adicionarNodoBody(h1)
+        adicionarNodoBody(p)
+        adicionarNodoBody(h2)
+        adicionarNodoBody(ul)
+        adicionarNodoBody(informacion)
+        adicionarNodoBody(h3)
+        adicionarNodoBody(video)
+    </script>
+    
+</body>
+</html>

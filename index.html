@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Principal</title>
+    <script src="js/utilidades.js"></script>
+</head>
+<body>
+
+    <script>
+        titulo = crearNodoTexto("h1", "Bienvenido al Sitio de Deadpool")
+        parrafo = crearNodoTexto("p", "Explora las siguentes páginas para conocer más sobre Deadpool y sus frases memorabes.")
+        subtitulo = crearNodoTexto("h2", "Menú de navegación")
+        ul = crearNodo("ul")
+        liUno = crearNodo("li")
+        liDos = crearNodo("li")
+        pagina1 = crearEnlace("Personajes Principales", "html/ejercicio1.html", "_blank")
+        pagina2 = crearEnlace("Frases Memorables", "html/pagina2.html", "_blank")
+
+        adicionarContenedor(pagina1,liUno)
+        adicionarContenedor(pagina2,liDos)
+        adicionarContenedor(liUno, ul)
+        adicionarContenedor(liDos, ul)
+
+        titulo2 = crearNodoTexto("h2", "¿Quién es Deadpool?")
+        parrafo2 = crearNodo("p")
+        textoParrafo = document.createTextNode("Deadpool, también conocido como")
+        nombre = crearNodoTexto("strong", "Wade Wilson")
+        texto2Parrafo = document.createTextNode(", es un anti-heroe de Marvel conocido por su humor sarcástico y sus habilidades de combate.")
+        parrafo2.appendChild(textoParrafo)
+        parrafo2.appendChild(nombre)
+        parrafo2.appendChild(texto2Parrafo)
+
+        adicionarNodoBody(titulo)
+        adicionarNodoBody(parrafo)
+        adicionarNodoBody(subtitulo)
+        adicionarNodoBody(ul)
+        adicionarNodoBody(titulo2)
+        adicionarNodoBody(parrafo2)
+        crearImagen("../recursos/imagenes/imagen1.jpg", "imagen1", "350", "250")
+    </script>
+    
+</body>
+</html>

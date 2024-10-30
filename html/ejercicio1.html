@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personajes Principales</title>
+    <script src="../js/utilidades.js"></script>
+</head>
+<body>
+
+    <script>
+        titulo = crearNodoTexto("h1", "Personajes Principales de Deadpool")
+        deadpool = crearNodoTexto("h2", "Deadpool (Wade Wilson)")
+        parrafo = crearNodo("p")
+        textoParrafo = document.createTextNode("Deadpool, también conocido como")
+        nombre = crearNodoTexto("strong", "Wade Wilson")
+        texto2Parrafo = document.createTextNode(", es el protagonista de la película. Es un mercenario con un sentido del humor único y habilidades de combate excepcionales.")
+        parrafo.appendChild(textoParrafo)
+        parrafo.appendChild(nombre)
+        parrafo.appendChild(texto2Parrafo)
+
+        vanessa = crearNodoTexto("h2", "Vanessa")
+        segundoParrafo = crearNodo("p")
+        segundoNombre = crearNodoTexto("em","Vanessa Carlysle")
+        textoSegundoParrafo = document.createTextNode(" es la novia de Wade Wilson. Es una figura clave en la vida de Deadpool y su motivación principal en la historia.")
+        segundoParrafo.appendChild(segundoNombre)
+        segundoParrafo.appendChild(textoSegundoParrafo)
+
+        colossus = crearNodoTexto("h2", "Colossus")
+        tercerParrafo = crearNodo("p")
+        tercerNombre = crearAbreviacion("Piotr Nikolaievitch Rasputin","Coloso")
+        texto1TercerParrafo = document.createTextNode("Colossus, también conocido como ")
+        texto2TercerParrafo = document.createTextNode(", es un miembro de los X-Men que intente guiar a Deadpool hacia un camino más heroico.")
+        tercerParrafo.appendChild(texto1TercerParrafo)
+        tercerParrafo.appendChild(tercerNombre)
+        tercerParrafo.appendChild(texto2TercerParrafo)
+
+        cuartoParrafo = crearNodoTexto("p", "Estos son solo algunos de los personajes memorables de la película")
+        cuartoNombre = crearNodoTexto("em"," Deadpool")
+        cuartoParrafo.appendChild(cuartoNombre)
+        
+        adicionarNodoBody(titulo)
+        adicionarNodoBody(deadpool)
+        adicionarNodoBody(parrafo)
+        crearImagen("../recursos/imagenes/imagen1.jpg", "imagen1", "250", "150")
+        adicionarNodoBody(vanessa)
+        adicionarNodoBody(segundoParrafo)
+        crearImagen("../recursos/imagenes/imagen2.jpg", "imagen2", "250", "150")
+        adicionarNodoBody(colossus)
+        adicionarNodoBody(tercerParrafo)
+        crearImagen("../recursos/imagenes/imagen3.webp", "imagen3", "250", "370")
+        adicionarNodoBody(cuartoParrafo)
+    </script>
+    
+</body>
+</html>
